@@ -2,8 +2,8 @@
 # /whitelist command - whitelist.use
 # Notifications - whitelist.notifications
 messages:
-  usage: " &8» &cUsage: &6/whitelist <on/off/add/remove/message>"
-  no-permission: " &8» &cYou don't have permission for this command."
+  usage: " &8» &cUsage: &6/whitelist <on/off/add/remove/message/list>"
+  list: " &8» &cWhitelisted players: &6%s"
   toggle-on: " &8» &7Whitelist has been &aenabled."
   toggle-off: " &8» &7Whitelist has been &cdisabled."
   player-added: " &8» &7Player &6%s &7has been &aadded &7to the whitelist."

@@ -4,4 +4,5 @@ main: me.ishift.whitelist.WhitelistPlugin
 
 commands:
   whitelist:
+    permission: whitelist.use
     description: Whitelist management command.
