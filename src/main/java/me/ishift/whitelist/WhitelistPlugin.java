@@ -24,7 +24,7 @@ public class WhitelistPlugin extends JavaPlugin {
             throw new IllegalStateException("Command is null, have you modified the plugin.yml file?");
         }
         command.setExecutor(new WhitelistCommand(this));
-        command.setTabCompleter(new WhitelistTabCompleter());
+        command.setTabCompleter(new WhitelistTabCompleter(this));
     }
 
     @Override

@@ -2,9 +2,11 @@ package me.ishift.whitelist.command;
 
 import me.ishift.whitelist.WhitelistPlugin;
 import me.ishift.whitelist.util.MessageUtils;
+import org.apache.commons.lang.StringUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.util.StringUtil;
 
 public class WhitelistCommand implements CommandExecutor {
     private final WhitelistPlugin plugin;
@@ -64,6 +66,9 @@ public class WhitelistCommand implements CommandExecutor {
                 String message = MessageUtils.buildString(args, 1);
                 this.sendMessage(sender, "messages.message-set", message);
                 this.plugin.getData().setMessage(message);
+                break;
+            case "list":
+                this.sendMessage(sender, "messages.list", StringUtils.join(this.plugin.getData().getPlayers(), ", "));
                 break;
             default:
                 this.sendMessage(sender, "messages.usage");
